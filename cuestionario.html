@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario de Prevención</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(-45deg, #084343, #00e6e6, #084343, #00cccc);
+            background-size: 400% 400%;
+            animation: gradientMove 15s ease infinite;
+            color: #003333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            margin: 0;
+            color: #ffffff;
+            text-shadow: 1px 1px 2px #003333;
+        }
+
+        header a {
+            background-color: #00E6E6;
+            padding: 10px 20px;
+            border-radius: 10px;
+            color: #003333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.25);
+            border: 1px solid rgba(0, 230, 230, 0.3);
+            border-radius: 16px;
+            padding: 30px;
+            max-width: 700px;
+            width: 100%;
+            color: #003333;
+            font-size: 1.1rem;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: #ffffff;
+            text-shadow: 1px 1px 2px #003333;
+            font-size: 1.5rem;
+        }
+
+        .pregunta {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin: 5px 0;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 24px;
+            font-size: 1rem;
+            background-color: #00E6E6;
+            color: #003333;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        #resultado {
+            margin-top: 20px;
+            background-color: #ffffffcc;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 1rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Cuestionario de Prevención</h1>
+        <a href="dashboard.html">Regresar</a>
+    </header>
+
+    <main>
+        <form class="glass" id="cuestionario">
+            <h2>Por favor responde con sinceridad</h2>
+
+            <div class="pregunta">
+                <label>1. ¿Tienes dificultades para manejar tus finanzas?</label>
+                <select required>
+                    <option value="0">Muy en desacuerdo</option>
+                    <option value="1">En desacuerdo</option>
+                    <option value="2">Neutral</option>
+                    <option value="3">De acuerdo</option>
+                    <option value="4">Muy de acuerdo</option>
+                </select>
+            </div>
+
+            <div class="pregunta">
+                <label>2. ¿Recibes llamadas o correos electrónicos sospechosos?</label>
+                <select required>
+                    <option value="0">Muy en desacuerdo</option>
+                    <option value="1">En desacuerdo</option>
+                    <option value="2">Neutral</option>
+                    <option value="3">De acuerdo</option>
+                    <option value="4">Muy de acuerdo</option>
+                </select>
+            </div>
+
+            <div class="pregunta">
+                <label>3. ¿Has proporcionado información personal o financiera a desconocidos?</label>
+                <select required>
+                    <option value="0">Muy en desacuerdo</option>
+                    <option value="1">En desacuerdo</option>
+                    <option value="2">Neutral</option>
+                    <option value="3">De acuerdo</option>
+                    <option value="4">Muy de acuerdo</option>
+                </select>
+            </div>
+
+            <div class="pregunta">
+                <label>4. ¿Tienes problemas para recordar tus contraseñas o números de cuenta?</label>
+                <select required>
+                    <option value="0">Muy en desacuerdo</option>
+                    <option value="1">En desacuerdo</option>
+                    <option value="2">Neutral</option>
+                    <option value="3">De acuerdo</option>
+                    <option value="4">Muy de acuerdo</option>
+                </select>
+            </div>
+
+            <div class="pregunta">
+                <label>5. ¿Alguien más maneja tus finanzas o toma decisiones por ti?</label>
+                <select required>
+                    <option value="0">Muy en desacuerdo</option>
+                    <option value="1">En desacuerdo</option>
+                    <option value="2">Neutral</option>
+                    <option value="3">De acuerdo</option>
+                    <option value="4">Muy de acuerdo</option>
+                </select>
+            </div>
+
+            <div class="pregunta">
+                <label>6. ¿Has sido víctima de fraude o estafa en el pasado?</label>
+                <select required>
+                    <option value="0">Muy en desacuerdo</option>
+                    <option value="1">En desacuerdo</option>
+                    <option value="2">Neutral</option>
+                    <option value="3">De acuerdo</option>
+                    <option value="4">Muy de acuerdo</option>
+                </select>
+            </div>
+
+            <div class="pregunta">
+                <label>7. ¿Tienes acceso a recursos y apoyo para manejar tus finanzas y protegerte de fraude?</label>
+                <select required>
+                    <option value="4">Muy en desacuerdo</option>
+                    <option value="3">En desacuerdo</option>
+                    <option value="2">Neutral</option>
+                    <option value="1">De acuerdo</option>
+                    <option value="0">Muy de acuerdo</option>
+                </select>
+            </div>
+
+            <button type="submit">Evaluar</button>
+            <div id="resultado"></div>
+        </form>
+    </main>
+
+    <script>
+        document.getElementById("cuestionario").addEventListener("submit", function (e) {
+            e.preventDefault();
+            const selects = document.querySelectorAll("select");
+            let puntaje = 0;
+            selects.forEach(select => puntaje += parseInt(select.value));
+
+            let mensaje = "";
+            if (puntaje >= 12) {
+                mensaje = "<strong>Alerta:</strong> Tienes un alto riesgo de ser víctima de fraude. Busca apoyo y recursos para manejar tus finanzas y protegerte.";
+            } else if (puntaje >= 5) {
+                mensaje = "<strong>Precaución:</strong> Podrías estar en riesgo. Es recomendable informarte más y tomar medidas preventivas.";
+            } else {
+                mensaje = "<strong>Bien hecho:</strong> Actualmente estás tomando buenas decisiones, pero nunca está de más mantenerte informado.";
+            }
+
+            document.getElementById("resultado").innerHTML = mensaje;
+        });
+    </script>
+</body>
+
+</html>

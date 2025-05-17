@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ruta del Saber - Módulo 1</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(-45deg, #084343, #00e6e6, #084343, #00cccc);
+      background-size: 400% 400%;
+      animation: gradientMove 15s ease infinite;
+      color: #003333;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 15px;
+    }
+
+    .contenedor {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 16px;
+      padding: 30px;
+      max-width: 800px;
+      width: 100%;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    h1,
+    h2 {
+      text-align: center;
+      color: #003333;
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      margin: 20px 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .evaluacion {
+      margin-top: 30px;
+    }
+
+    .respuesta {
+      display: block;
+      margin: 10px 0;
+      padding: 10px 20px;
+      background-color: #00e6e6;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      color: #003333;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .respuesta:hover {
+      background-color: #009999;
+      color: #fff;
+    }
+
+    .retro {
+      margin-top: 20px;
+      background-color: #ffffffdd;
+      padding: 15px;
+      border-radius: 10px;
+      display: none;
+      text-align: left;
+    }
+
+    .boton-final {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .boton-final a {
+      padding: 12px 24px;
+      background-color: #00E6E6;
+      color: #003333;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+
+    @keyframes gradientMove {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="contenedor">
+    <h1>Ruta del Saber</h1>
+    <h2>Módulo 1: Phishing</h2>
+    <p>
+      El phishing es un fraude digital en el que alguien intenta engañarte para que compartas información personal como
+      contraseñas o datos bancarios.
+      Usualmente lo hacen a través de correos electrónicos o mensajes que parecen legítimos.
+      El phishing es un intento de engañar a las personas para que revelen información personal, como contraseñas o datos bancarios, haciéndose pasar por
+una entidad confiable.
+
+<h2>Tipos comunes de Phishing :</h2>
+<b>Correos electrónicos falsos:</b> Mensajes que parecen de instituciones bancarias o
+empresas legítimas solicitando información.
+<br><b>Mensajes de texto (smishing):</b> Mensajes SMS engañosos que intentan obtener datos
+personales.
+<br> <b>Sitios web falsos:</b> Páginas de internet que imitan a las reales para robar información.
+
+
+    </p>
+
+    <div class="video-container">
+  <a href="https://www.youtube.com/watch?v=Esde5ek_Yao" target="_blank" rel="noopener noreferrer">
+    <img src="imagenes/pishingg.jpeg" alt="Haz clic para ver el video" style="width:100%; border-radius:12px; box-shadow: 0 4px 20px rgba(0,0,0,0.25);">
+  </a>
+</div>
+
+
+    <div class="evaluacion">
+      <h3>¿Qué debes hacer si recibes un correo sospechoso?</h3>
+      <button class="respuesta" onclick="mostrarRetro('a')">A. Abrir el enlace para verificar si es verdadero</button>
+      <button class="respuesta" onclick="mostrarRetro('b')">B. No abrir enlaces y consultar con alguien de
+        confianza</button>
+    </div>
+
+    <div class="retro" id="retro-a">
+      ❌ Esa no es la mejor opción. Abrir enlaces sospechosos puede ponerte en riesgo. Es mejor ser precavido.
+    </div>
+
+    <div class="retro" id="retro-b">
+      ✅ ¡Correcto! Nunca abras enlaces sospechosos. Consulta con alguien antes de hacer clic o compartir información.
+    </div>
+
+    <div class="boton-final">
+      <a href="modulo2.html">Siguiente módulo</a>
+    </div>
+  </div>
+
+  <script>
+    function mostrarRetro(opcion) {
+      document.getElementById('retro-a').style.display = 'none';
+      document.getElementById('retro-b').style.display = 'none';
+      document.getElementById('retro-' + opcion).style.display = 'block';
+    }
+  </script>
+</body>
+
+</html>

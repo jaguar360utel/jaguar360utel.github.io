@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Centro de Aprendizaje - Jaguar 360</title>
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" defer></script>
+  <script src="dashboard.js" defer></script>
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="navbar-logo">
+      <img src="imagenes/LOGOTIPO CODIGO JAGUAR 360°.png" alt="Jaguar 360" style="height: 40px;">
+      <span>Jaguar 360</span>
+    </div>
+    <nav class="navbar-links">
+      <a href="nosotros.html" class="tab-link">Nosotros</a>
+      <a href="ayuda.html" class="tab-link">Ayuda</a>
+      <a href="contacto.html" class="tab-link">Contacto</a>
+    </nav>
+  </header>
+
+  <main class="dashboard-container">
+    <h1>Centro de Aprendizaje Jaguar 360</h1>
+
+    <div class="carousel-container">
+      <button id="prevBtn" class="carousel-nav">⟨</button>
+      <nav class="menu-carousel" id="menu">
+        <a href="ruta.html" class="menu-item" data-tooltip="Ruta del Saber">
+          <i class="fas fa-road"></i>
+        </a>
+        <a href="sugerencias.html" class="menu-item" data-tooltip="Sugerencias">
+          <i class="fas fa-lightbulb"></i>
+        </a>
+        <a href="sabias.html" class="menu-item" data-tooltip="¿Sabías que?">
+          <i class="fas fa-question-circle"></i>
+        </a>
+        <a href="cuestionario.html" class="menu-item" data-tooltip="Cuestionario">
+          <i class="fas fa-bell"></i>
+        </a>
+      </nav>
+      <button id="nextBtn" class="carousel-nav">⟩</button>
+    </div>
+
+  
+    <div class="promo-app">
+      <img src="imagenes/soon.jpeg" alt="Próximamente en app móvil" class="pulse-img" />
+
+      <p class="promo-text">¡Próximamente también en tu celular!</p>
+    </div>
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  text-align: center;
+  color: #003333;
+}
+
+#inicio {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(-45deg, #084343, #010505, #084343, #00cccc);
+  background-size: 400% 400%;
+  animation: gradientMove 5s ease infinite;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(0, 230, 230, 0.25);
+  border-radius: 16px;
+  padding: 40px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  color: #003333;
+  max-width: 420px;
+  width: 90%;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 20px;
+  animation: logoPulse 4s ease-in-out infinite;
+}
+
+button {
+  margin-top: 15px;
+  padding: 12px 24px;
+  font-size: 18px;
+  background-color: #00E6E6;
+  color: #003333;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #009999;
+  color: #ffffff;
+}
+
+.slogan {
+  padding: 20px 10px;
+  font-size: 1.2rem;
+  color: #ffffff;
+  font-weight: 600;
+  animation: fadeInUp 1.2s ease-in-out;
+  margin-top: 20px;
+  text-shadow: 1px 1px 4px #003333; 
+  min-height: 30px; 
+}
+
+#cursor {
+  display: inline-block;
+  color: #ffffff;
+  animation: blink 0.7s infinite;
+  font-weight: bold;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes logoPulse {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  25% {
+    transform: scale(1.05) rotate(1deg);
+  }
+  50% {
+    transform: scale(1) rotate(-1deg);
+    opacity: 0.95;
+  }
+  75% {
+    transform: scale(1.05) rotate(1deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+}
+
+.formulario input[type="text"],
+.formulario input[type="number"] {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: #003333;
+}
+
+.checkbox-label a {
+  color: #00e6e6;
+  text-decoration: underline;
+}

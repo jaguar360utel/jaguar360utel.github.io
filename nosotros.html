@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nosotros - Jaguar 360</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(-45deg, #084343, #00e6e6, #084343, #00cccc);
+      background-size: 400% 400%;
+      animation: gradientMove 15s ease infinite;
+      color: #003333;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 30px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    .navbar-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .navbar-logo img {
+      height: 40px;
+    }
+
+    .navbar-links a {
+      color: #ffffff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(0, 230, 230, 0.25);
+      border-radius: 16px;
+      padding: 40px;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+      max-width: 600px;
+      width: 90%;
+      color: #003333;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    @keyframes gradientMove {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="navbar-logo">
+      <img src="imagenes/LOGOTIPO CODIGO JAGUAR 360°.png" alt="Jaguar 360">
+      <span>Jaguar 360</span>
+    </div>
+    <nav class="navbar-links">
+      <a href="index.html">Inicio</a>
+      <a href="ayuda.html">Ayuda</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="dashboard.html">Menú</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="glass">
+      <h1>¿Quiénes Somos?</h1>
+      <p>Somos un equipo comprometido con la educación digital de los adultos mayores. Jaguar 360 nace como respuesta a las amenazas crecientes en ciberseguridad, con el objetivo de prevenir fraudes y fortalecer la confianza digital de nuestros usuarios.</p>
+      <p>Nuestro proyecto se enfoca en brindar información clara, accesible y amigable para proteger a nuestras personas mayores en línea.</p>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acceso - Jaguar 360</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <div id="inicio">
+      <div class="glass">
+        <h2>Acceso</h2>
+        <form class="formulario" id="form-acceso">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" required />
+
+          <label for="edad">Edad:</label>
+          <input type="number" id="edad" min="0" required />
+
+          <label for="contacto">Correo o Teléfono:</label>
+          <input type="text" id="contacto" required />
+
+          <label class="checkbox-label">
+            <input type="checkbox" id="privacidad" required />
+            Acepto el <a href="#">Aviso de privacidad</a>
+          </label>
+
+          <button type="submit">Ir al Dashboard</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

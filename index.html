@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Jaguar 360 - Inicio</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <div id="inicio">
+    <div class="glass">
+      <img src="imagenes/LOGOTIPO CODIGO JAGUAR 360°.png" alt="Logo Jaguar 360" class="logo" />
+      <h1>Jaguar 360</h1>
+      <a href="acceso.html"><button>Acceso</button></a>
+      <div class="slogan">
+        <span id="typed-text"></span><span id="cursor">|</span>
+      </div>
+
+      <script>
+        const text = "Tu aliado digital en cada paso, en tu idioma y a tu ritmo.";
+        const typedText = document.getElementById("typed-text");
+        const cursor = document.getElementById("cursor");
+
+        let index = 0;
+        let isDeleting = false;
+
+        function typeLoop() {
+          if (!isDeleting) {
+            typedText.textContent += text.charAt(index);
+            index++;
+            if (index === text.length) {
+              isDeleting = true;
+              setTimeout(typeLoop, 2000); // Espera 2 segundos antes de borrar
+              return;
+            }
+          } else {
+            typedText.textContent = text.substring(0, index - 1);
+            index--;
+            if (index === 0) {
+              isDeleting = false;
+            }
+          }
+          setTimeout(typeLoop, isDeleting ? 40 : 80);
+        }
+
+        window.onload = () => {
+          setTimeout(typeLoop, 500);
+        };
+      </script>
+</body>
+
+</html>
